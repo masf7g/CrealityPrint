@@ -132,7 +132,7 @@ void SlicerLayer::connectOpenPolylines(Polygons& open_polylines)
 void SlicerLayer::stitch(Polygons& open_polylines)
 {
     bool allow_reverse = true;
-	//ÏÈÕýÏò·ìºÏ£¬Ê£ÓàµÄÔÙ²ÎÓë·´Ïò·ìºÏ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï£ï¿½Ê£ï¿½ï¿½ï¿½ï¿½Ù²ï¿½ï¿½ë·´ï¿½ï¿½ï¿½ï¿½
 	connectOpenPolylinesImpl(open_polylines, max_stitch1, max_stitch1, false);
     connectOpenPolylinesImpl(open_polylines, max_stitch2, max_stitch2, allow_reverse);
 }
@@ -1161,8 +1161,8 @@ void Slicer::makePolygons(SliceContext* application, Mesh& mesh, SlicingToleranc
         layer_apply_initial_xy_offset = 1;
     }
 
-    if (mesh.settings.get<bool>("support_mesh_drop_down") || mesh.settings.get<bool>("anti_overhang_mesh"))
-        return;
+    // if (mesh.settings.get<bool>("support_mesh_drop_down") || mesh.settings.get<bool>("anti_overhang_mesh"))
+    //     return;
 
     const coord_t xy_offset = mesh.settings.get<coord_t>("xy_offset");
     const coord_t xy_offset_0 = mesh.settings.get<coord_t>("xy_offset_layer_0");
